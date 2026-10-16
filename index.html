@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>كريم السيد | KARIM ELSAYED — ستريت وير مصري</title>
+<meta name="description" content="كريم السيد KARIM ELSAYED — متجر ملابس ستريت وير مصري مع خدمة الطباعة حسب الطلب. اطلب عبر واتساب.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">تخطي إلى المحتوى</a>
+<div class="demo-strip">متجر تجريبي — المنتجات المعروضة نماذج للعرض وليست مخزونًا حقيقيًا</div>
+
+<header class="site-header">
+  <div class="bar container">
+    <button class="icon-btn burger" id="navToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="فتح القائمة">☰</button>
+    <a class="logo" href="#home" aria-label="كريم السيد KARIM ELSAYED"><span class="logo-ar">كريم السيد</span><span class="logo-en">KARIM ELSAYED</span></a>
+    <nav id="nav" class="nav" aria-label="القائمة الرئيسية">
+      <a href="#shop">المتجر</a><a href="#categories">الأقسام</a><a href="#designer">صمّم تيشيرتك</a><a href="#contact">تواصل معنا</a>
+    </nav>
+    <button class="icon-btn cart-btn" id="cartOpen" type="button" aria-label="فتح السلة">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L21 7H6"/></svg>
+      <span class="count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<div id="storeMain">
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">STREETWEAR • EGYPT</p>
+        <h1>ستايل الشارع المصري<br>بصوت عالي</h1>
+        <p class="lead">تصاميم عصرية بروح القاهرة، وتقدر كمان تطبع صورتك الخاصة على تيشيرتك وتطلب مباشرة عبر واتساب.</p>
+        <div class="hero-cta">
+          <a class="btn btn-light" href="#shop">تسوّق الآن</a>
+          <a class="btn btn-ghost" href="#designer">صمّم تيشيرتك</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><span class="ring"></span><span class="mono">KE</span><span class="hero-en">KARIM<br>ELSAYED</span></div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="categories"><div class="container">
+    <header class="sec-head"><h2>تسوّق حسب القسم</h2></header>
+    <div class="tiles" id="categoryTiles"></div>
+  </div></section>
+
+  <section class="section alt reveal" id="featured"><div class="container">
+    <header class="sec-head"><h2>منتجات مميزة</h2></header>
+    <div class="grid" id="featuredGrid"></div>
+  </div></section>
+
+  <section class="section reveal" id="new"><div class="container">
+    <header class="sec-head"><h2>وصل حديثًا</h2></header>
+    <div class="grid" id="newGrid"></div>
+  </div></section>
+
+  <section class="section alt reveal" id="best"><div class="container">
+    <header class="sec-head"><h2>الأكثر مبيعًا</h2></header>
+    <div class="grid" id="bestGrid"></div>
+  </div></section>
+
+  <section class="promo reveal"><div class="container promo-in">
+    <div><h2>طباعة حسب الطلب</h2><p>ارفع صورتك من الموبايل أو الكمبيوتر، حرّكها وكبّرها على التيشيرت، وأضفها للسلة.</p></div>
+    <a class="btn btn-light" href="#designer">ابدأ التصميم</a>
+  </div></section>
+
+  <section class="section reveal" id="shop"><div class="container">
+    <header class="sec-head"><h2>كل المنتجات</h2></header>
+    <div class="shop-tools">
+      <div class="field"><label for="shopSearch">بحث</label><input id="shopSearch" type="search" placeholder="ابحث عن منتج..." autocomplete="off"></div>
+      <div class="field"><label for="shopSort">ترتيب</label>
+        <select id="shopSort"><option value="newest">الأحدث</option><option value="featured">المميزة أولًا</option><option value="price-asc">السعر: الأقل أولًا</option><option value="price-desc">السعر: الأعلى أولًا</option></select></div>
+    </div>
+    <div class="chips" id="shopChips" role="group" aria-label="فلترة حسب القسم"></div>
+    <p class="muted" id="shopCount" role="status"></p>
+    <div class="grid" id="shopGrid"></div>
+  </div></section>
+
+  <section class="section alt designer reveal" id="designer"><div class="container">
+    <header class="sec-head"><h2>صمّم تيشيرتك بنفسك</h2><p class="muted">ارفع صورة (JPG / PNG / WEBP) واسحبها داخل منطقة الطباعة، وغيّر حجمها بالمؤشر أو بالشريط.</p></header>
+    <div class="designer-grid">
+      <div class="stage-wrap">
+        <div class="stage" id="designStage">
+          <div class="tee-layer" id="teeLayer"></div>
+          <div class="print-area" id="printArea">
+            <span class="area-hint" id="areaHint">منطقة الطباعة</span>
+            <img id="designImg" alt="تصميمك" draggable="false" tabindex="0" hidden>
+            <span class="handle" id="designHandle" hidden aria-hidden="true"></span>
+          </div>
+        </div>
+        <p class="note" role="note">⚠️ المعاينة توضيحية ثنائية الأبعاد (2D) وليست مجسمًا ثلاثي الأبعاد، وقد تختلف نتيجة الطباعة النهائية قليلًا عن المعاينة.</p>
+      </div>
+      <form class="panel" id="designForm" novalidate>
+        <fieldset><legend>١) صورتك</legend>
+          <input type="file" id="designFile" accept="image/jpeg,image/png,image/webp" class="visually-hidden" tabindex="-1" aria-label="اختيار صورة التصميم">
+          <div class="btn-row">
+            <button class="btn" type="button" id="designPick">اختيار صورة</button>
+            <button class="btn btn-outline" type="button" id="designRemove" hidden>إزالة الصورة</button>
+          </div>
+          <p class="muted small">الأنواع المسموحة: JPG, JPEG, PNG, WEBP — حتى ٥ ميجابايت.</p>
+        </fieldset>
+        <fieldset><legend>٢) التيشيرت</legend>
+          <div class="field"><span class="lbl" id="lblColor">اللون</span><div id="designColors"></div></div>
+          <div class="two">
+            <div class="field"><label for="designSize">المقاس</label><select id="designSize"></select></div>
+            <div class="field"><span class="lbl">الكمية</span><div id="designQty"></div></div>
+          </div>
+          <div class="field"><span class="lbl">مكان الطباعة</span>
+            <div class="radios"><label><input type="radio" name="designSide" value="front" checked> أمامي</label><label><input type="radio" name="designSide" value="back"> خلفي</label></div></div>
+        </fieldset>
+        <fieldset><legend>٣) الحجم والموضع</legend>
+          <div class="field"><label for="designScale">حجم الصورة</label><input type="range" id="designScale" min="10" max="100" value="70" disabled></div>
+          <p class="muted small">اسحب الصورة لتحريكها، واسحب الدائرة في ركنها لتكبيرها. من لوحة المفاتيح: الأسهم للتحريك، + و − للحجم.</p>
+        </fieldset>
+        <p class="price-line">سعر التيشيرت: <strong id="designPrice"></strong></p>
+        <div class="btn-row">
+          <button class="btn btn-block" type="button" id="designAdd">أضف التصميم إلى السلة</button>
+          <button class="btn btn-outline" type="button" id="designReset">إعادة ضبط التصميم</button>
+        </div>
+        <p class="msg" id="designMsg" role="status"></p>
+        <p class="note">ملاحظة: الصورة الأصلية لا تُرسل تلقائيًا؛ ستُرفقها بنفسك في محادثة واتساب بعد فتح الطلب.</p>
+      </form>
+    </div>
+  </div></section>
+
+  <section class="section contact reveal" id="contact"><div class="container contact-in">
+    <div><h2>اطلب وتواصل عبر واتساب</h2><p>أضف منتجاتك للسلة ثم أكمل الطلب، وسيُفتح واتساب برسالة جاهزة بتفاصيل طلبك لتراجعها وترسلها بنفسك.</p></div>
+    <a class="btn btn-wa" id="waContact" href="#contact" rel="noopener">تواصل عبر واتساب</a>
+  </div></section>
+</div>
+
+<section class="section admin" id="adminSection" hidden><div class="container">
+  <div class="admin-warn" role="alert"><strong>⚠️ لوحة إدارة محلية تجريبية.</strong> لا توجد كلمة مرور ولا خادم؛ أي زائر يعرف الرابط <code>#admin</code> يمكنه فتحها، والتعديلات تُحفظ في متصفحك أنت فقط (localStorage) ولا تظهر للعملاء أو على أجهزة أخرى. يجب استبدالها بنظام مصادقة وخادم حقيقي قبل أي استخدام تجاري.</div>
+  <div class="admin-top"><h2>إدارة المنتجات (تجريبية)</h2><a class="btn btn-outline btn-sm" href="#home">العودة للمتجر</a></div>
+  <p class="muted small" id="storageInfo"></p>
+  <div class="admin-grid">
+    <div>
+      <div class="btn-row"><button class="btn btn-sm" type="button" id="adminNew">+ منتج جديد</button><button class="btn btn-outline btn-sm" type="button" id="adminRestore">استعادة المنتجات التجريبية</button></div>
+      <ul class="admin-list" id="adminList"></ul>
+    </div>
+    <div>
+      <form class="panel" id="adminForm" novalidate>
+        <h3 id="afTitle">منتج جديد</h3>
+        <input type="hidden" id="afId">
+        <div class="field"><label for="afName">اسم المنتج *</label><input id="afName" maxlength="80" required></div>
+        <div class="field"><label for="afCategory">القسم</label><select id="afCategory"></select></div>
+        <div class="field"><label for="afDesc">الوصف</label><textarea id="afDesc" rows="3" maxlength="400"></textarea></div>
+        <div class="two">
+          <div class="field"><label for="afPrice">السعر (ج.م) *</label><input id="afPrice" type="number" min="1" step="1" inputmode="decimal"></div>
+          <div class="field"><label for="afDiscount">سعر الخصم (اختياري)</label><input id="afDiscount" type="number" min="1" step="1" inputmode="decimal"></div>
+        </div>
+        <div class="field"><label for="afStock">الكمية في المخزون</label><input id="afStock" type="number" min="0" step="1" inputmode="numeric" value="10"></div>
+        <div class="field"><label for="afSizes">المقاسات (مفصولة بفواصل)</label><input id="afSizes" value="S, M, L, XL"></div>
+        <div class="field"><label for="afColors">الألوان (سطر لكل لون بصيغة: الاسم:#لون)</label><textarea id="afColors" rows="3" dir="ltr">أسود:#111111
+أبيض:#f5f5f5</textarea></div>
+        <div class="checks">
+          <label><input type="checkbox" id="afCustom"> متاح للطباعة حسب الطلب</label>
+          <label><input type="checkbox" id="afPublished" checked> منشور</label>
+          <label><input type="checkbox" id="afFeatured"> مميز</label>
+          <label><input type="checkbox" id="afBest"> الأكثر مبيعًا</label>
+        </div>
+        <div class="field"><label for="afImages">صور المنتج (حتى ٤، JPG/PNG/WEBP، ٢ ميجا للصورة)</label><input id="afImages" type="file" accept="image/jpeg,image/png,image/webp" multiple></div>
+        <div class="previews" id="afPreviews"></div>
+        <div class="btn-row"><button class="btn" type="submit">حفظ المنتج</button><button class="btn btn-outline" type="button" id="afReset">إلغاء / جديد</button></div>
+        <p class="msg" id="afMsg" role="status"></p>
+      </form>
+      <form class="panel" id="settingsForm" novalidate>
+        <h3>إعدادات المتجر</h3>
+        <div class="two">
+          <div class="field"><label for="stDelivery">رسوم التوصيل (ج.م)</label><input id="stDelivery" type="number" min="0" step="1" inputmode="decimal"></div>
+          <div class="field"><label for="stFree">توصيل مجاني من (0 = معطّل)</label><input id="stFree" type="number" min="0" step="1" inputmode="decimal"></div>
+        </div>
+        <div class="field"><label for="stCats">الأقسام (قسم في كل سطر)</label><textarea id="stCats" rows="6"></textarea></div>
+        <button class="btn" type="submit">حفظ الإعدادات</button>
+        <p class="msg" id="stMsg" role="status"></p>
+      </form>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="container foot-grid">
+    <div><div class="logo foot-logo"><span class="logo-ar">كريم السيد</span><span class="logo-en">KARIM ELSAYED</span></div><p>ستريت وير مصري وطباعة حسب الطلب.</p></div>
+    <div><h3>تواصل</h3><p>عبر واتساب فقط — اضغط زر التواصل في قسم «اطلب وتواصل».</p></div>
+    <div><h3>السياسات</h3><ul class="plain">
+      <li><a href="#" data-policy="shipping">سياسة الشحن والتوصيل</a></li>
+      <li><a href="#" data-policy="returns">الاستبدال والاسترجاع</a></li>
+      <li><a href="#" data-policy="privacy">الخصوصية</a></li>
+      <li><a href="#admin">لوحة الإدارة (تجريبية)</a></li></ul></div>
+  </div>
+  <p class="copy">© كريم السيد — KARIM ELSAYED. المنتجات الظاهرة نماذج تجريبية.</p>
+</footer>
+
+<div class="overlay" id="cartOverlay"></div>
+<aside class="drawer" id="cartDrawer" aria-label="سلة التسوق">
+  <div class="drawer-head"><h2>سلة التسوق</h2><button class="icon-btn" type="button" id="cartClose" aria-label="إغلاق السلة">✕</button></div>
+  <div class="drawer-body">
+    <div class="empty" id="cartEmpty"><p>سلتك فارغة حاليًا.</p><button class="btn btn-sm" type="button" id="cartShopBtn">تصفّح المتجر</button></div>
+    <ul class="cart-list" id="cartItems"></ul>
+  </div>
+  <div class="drawer-foot" id="cartFooter" hidden>
+    <dl class="totals">
+      <div><dt>المجموع الفرعي</dt><dd id="cartSub"></dd></div>
+      <div><dt>رسوم التوصيل</dt><dd id="cartDelivery"></dd></div>
+      <div class="grand"><dt>الإجمالي</dt><dd id="cartTotal"></dd></div>
+    </dl>
+    <p class="msg err" id="cartIssue" role="alert"></p>
+    <button class="btn btn-block" type="button" id="checkoutBtn">إتمام الطلب عبر واتساب</button>
+    <button class="link-btn" type="button" id="cartClear">إفراغ السلة</button>
+  </div>
+</aside>
+
+<dialog id="productDialog" aria-label="تفاصيل المنتج"><button class="icon-btn dlg-close" type="button" data-close aria-label="إغلاق">✕</button><div id="productBody"></div></dialog>
+
+<dialog id="checkoutDialog" aria-labelledby="coTitle">
+  <button class="icon-btn dlg-close" type="button" data-close aria-label="إغلاق">✕</button>
+  <form id="checkoutForm" class="dlg-pad" novalidate>
+    <h2 id="coTitle">بيانات الطلب</h2>
+    <p class="muted" id="coSummary"></p>
+    <div class="field"><label for="coName">الاسم بالكامل *</label><input id="coName" autocomplete="name" maxlength="80" required></div>
+    <div class="field"><label for="coPhone">رقم الهاتف *</label><input id="coPhone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" maxlength="20" required></div>
+    <div class="field"><label for="coCity">المدينة / المحافظة *</label><input id="coCity" autocomplete="address-level2" maxlength="60" required></div>
+    <div class="field"><label for="coAddress">عنوان التوصيل *</label><textarea id="coAddress" rows="2" autocomplete="street-address" maxlength="250" required></textarea></div>
+    <div class="field"><label for="coNotes">ملاحظات الطلب (اختياري)</label><textarea id="coNotes" rows="2" maxlength="300"></textarea></div>
+    <p class="note" id="coCustomNote" hidden></p>
+    <p class="msg err" id="coErr" role="alert"></p>
+    <button class="btn btn-wa btn-block" type="submit">فتح واتساب بالرسالة الجاهزة</button>
+    <div class="msg" id="coStatus" role="status"></div>
+  </form>
+</dialog>
+
+<dialog id="policyDialog" aria-labelledby="policyTitle"><button class="icon-btn dlg-close" type="button" data-close aria-label="إغلاق">✕</button><div class="dlg-pad"><h2 id="policyTitle"></h2><div id="policyBody"></div></div></dialog>
+
+<dialog id="confirmDialog" class="small-dlg" aria-labelledby="confirmMsg">
+  <form method="dialog" class="dlg-pad"><p id="confirmMsg"></p><div class="btn-row"><button class="btn btn-danger" id="confirmOk" value="ok">تأكيد</button><button class="btn btn-outline" id="confirmNo" value="cancel">إلغاء</button></div></form>
+</dialog>
+
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
